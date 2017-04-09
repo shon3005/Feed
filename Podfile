@@ -8,7 +8,7 @@ target 'Feed' do
   # Pods for Feed
 
   pod 'Parse'
-
+  pod 'Bolts'
   target 'FeedTests' do
     inherit! :search_paths
     # Pods for testing

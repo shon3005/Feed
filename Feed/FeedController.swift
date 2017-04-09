@@ -137,8 +137,8 @@ class FeedController: UICollectionViewController, UICollectionViewDelegateFlowLa
         //
         //        }
         
-        navigationItem.title = "Content Feed"
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "post", style: .plain, target: self, action: #selector(handlePost))
+        navigationItem.title = "Feed"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Post", style: .plain, target: self, action: #selector(handlePost))
         
         collectionView?.alwaysBounceVertical = true
         
@@ -171,6 +171,7 @@ class FeedController: UICollectionViewController, UICollectionViewDelegateFlowLa
         
         feedCell.post = posts[indexPath.item]
         feedCell.feedController = self
+        feedCell.layer.cornerRadius = 10
         
         return feedCell
     }
@@ -183,7 +184,7 @@ class FeedController: UICollectionViewController, UICollectionViewDelegateFlowLa
             
             let knownHeight: CGFloat = 8 + 44 + 4 + 4 + 200 + 8 + 24 + 8 + 44
             
-            return CGSize(width: view.frame.width, height: rect.height + knownHeight + 24)
+            return CGSize(width: view.frame.width-30, height: rect.height + knownHeight + 24)
         }
         
         return CGSize(width: view.frame.width, height: 500)
@@ -353,9 +354,6 @@ class FeedCell: UICollectionViewCell {
     let nameLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 2
-        
-        
-        
         return label
     }()
     
@@ -438,7 +436,8 @@ class FeedCell: UICollectionViewCell {
         addConstraintsWithFormat("H:|-12-[v0]-12-|", views: dividerLineView)
         
         //button constraints
-        addConstraintsWithFormat("H:|[v0(v1)][v1]|", views: likeButton, commentButton)
+//        addConstraintsWithFormat("H:|[v0(v1)][v1]|", views: likeButton, commentButton)
+        addConstraintsWithFormat("H:|[v0]|", views: likeButton)
         
         addConstraintsWithFormat("V:|-12-[v0]", views: nameLabel)
         
@@ -446,7 +445,7 @@ class FeedCell: UICollectionViewCell {
         
         addConstraintsWithFormat("V:|-8-[v0(44)]-4-[v1]-4-[v2(200)]-8-[v3(24)]-8-[v4(0.4)][v5(44)]|", views: profileImageView, statusTextView, statusImageView, likesCommentsLabel, dividerLineView, likeButton)
         
-        addConstraintsWithFormat("V:[v0(44)]|", views: commentButton)
+//        addConstraintsWithFormat("V:[v0(44)]|", views: commentButton)
         //took out shareButton
         //addConstraintsWithFormat("V:[v0(44)]|", views: shareButton)
     }

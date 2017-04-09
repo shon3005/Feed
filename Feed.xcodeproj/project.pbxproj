@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		255F3D6F2D9F8E2D9856C3E3 /* Pods_Feed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD65F48AC4D3D55646429AFD /* Pods_Feed.framework */; };
+		48C4ABA41E8AFFC500998ED1 /* AddPostController+Handlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C4ABA31E8AFFC500998ED1 /* AddPostController+Handlers.swift */; };
 		4D918B761E80716E0043B270 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D918B751E80716E0043B270 /* AppDelegate.swift */; };
 		4D918B781E80716E0043B270 /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D918B771E80716E0043B270 /* FeedController.swift */; };
 		4D918B7D1E80716E0043B270 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D918B7C1E80716E0043B270 /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		0F653CA9C4D568214E8CE4EF /* Pods-FeedUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FeedUITests/Pods-FeedUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2D15794CEC7F477AEBDDAA86 /* Pods-Feed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Feed.release.xcconfig"; path = "Pods/Target Support Files/Pods-Feed/Pods-Feed.release.xcconfig"; sourceTree = "<group>"; };
+		48C4ABA31E8AFFC500998ED1 /* AddPostController+Handlers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AddPostController+Handlers.swift"; sourceTree = "<group>"; };
 		4D918B721E80716E0043B270 /* Feed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Feed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D918B751E80716E0043B270 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D918B771E80716E0043B270 /* FeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedController.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				4D918B7E1E80716E0043B270 /* LaunchScreen.storyboard */,
 				4D918B811E80716E0043B270 /* Info.plist */,
 				4D918BA31E809AC60043B270 /* AddPostController.swift */,
+				48C4ABA31E8AFFC500998ED1 /* AddPostController+Handlers.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -445,6 +448,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48C4ABA41E8AFFC500998ED1 /* AddPostController+Handlers.swift in Sources */,
 				4D918B781E80716E0043B270 /* FeedController.swift in Sources */,
 				4D918BA41E809AC60043B270 /* AddPostController.swift in Sources */,
 				4D918B761E80716E0043B270 /* AppDelegate.swift in Sources */,
